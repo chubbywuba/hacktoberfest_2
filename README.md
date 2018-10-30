@@ -1,31 +1,31 @@
 # hacktoberfest_2
 #Guess a number game
-# import random
+#import random
 import random
-# create and initialize variables 
-# have user input lower end of range
+#create and initialize variables 
+#have user input lower end of range
 lower = raw_input ("I want the number between")
 intLower = int(lower)
 
-# have user input upper end of range
+#have user input upper end of range
 upper = raw_input ("and ")
 intUpper = int(upper)
 turns = 4
 turnsCount = 0
 win_flag = False
-# generate the mystery number
+#generate the mystery number
 MysteryNumber = random.randint(intLower,intUpper)
 
-# have user input the number of turns and range
+#have user input the number of turns and range
 print "You will have ",turns," turns to guess a number between ", lower, " and ", upper
 
 while (turns > 0):
   turnsCount +=1
-  # have user input a guess
+  #have user input a guess
   guess = raw_input("Guess a number:")
   intGuess = int(guess)
  
-  # provide feedback	
+  #provide feedback	
   if (intGuess == MysteryNumber):
     win_flag = True
     break
@@ -51,12 +51,12 @@ else:
 
 
 if win_flag:
-  # print – message and number of turns
+  #print – message and number of turns
   print "You Win!"
   print "You guessed the mystery number in ", turnsCount, " turns"
   
 else:
-  # print – message and mystery number
+  #print – message and mystery number
   print "You lose"
   print "The mystery number was", MysteryNumber
    
